@@ -102,10 +102,6 @@ h2 {
   width: 70px !important;
 }
 
-/* .ant-layout-sider .ant-layout-sider-dark .ant-layout-sider-has-trigger{
-  background: rgb(255, 255, 255) !important;
-  flex: none !important;
-  max-width: none !important;
-  width: auto !important;
-  min-width: auto !important;
-} */
+:where(.css-dev-only-do-not-override-98ntnt).ant-menu-inline {
+  width: auto;
+}
