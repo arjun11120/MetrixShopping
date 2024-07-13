@@ -72,6 +72,46 @@ const CustomCardWithChart = () => {
       statusColor: "#4CAF50",
       statusBackground: "#C8E6C9",
     },
+    {
+      image: iphone13,
+      productName: "iPhone 13",
+      price: "₦730,000.00",
+      quantity: 2,
+      date: "14 Sept 2022",
+      status: "Completed",
+      statusColor: "#4CAF50",
+      statusBackground: "#C8E6C9",
+    },
+    {
+      image: iphone13,
+      productName: "iPhone 13",
+      price: "₦730,000.00",
+      quantity: 1,
+      date: "12 Sept 2022",
+      status: "Pending",
+      statusColor: "#CC5F5F",
+      statusBackground: "#F57E77",
+    },
+    {
+      image: iphone13,
+      productName: "iPhone 13",
+      price: "₦730,000.00",
+      quantity: 2,
+      date: "14 Sept 2022",
+      status: "Completed",
+      statusColor: "#4CAF50",
+      statusBackground: "#C8E6C9",
+    },
+    {
+      image: iphone13,
+      productName: "iPhone 13",
+      price: "₦730,000.00",
+      quantity: 2,
+      date: "14 Sept 2022",
+      status: "Completed",
+      statusColor: "#4CAF50",
+      statusBackground: "#C8E6C9",
+    }
   ];
   return (
     <Row gutter={24}>
