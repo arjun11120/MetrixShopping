@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, Layout } from "antd"; // Removed Slider from Ant Design
+import { Menu, Layout, Button } from "antd";
 import { HomeOutlined } from "@ant-design/icons";
 import { getItem } from "./utils"; // Assuming you move getItem function to utils.js or another appropriate file
 import "../css/sidebar.css";
@@ -16,7 +16,7 @@ import Gift from "../assets/images/gift.png";
 
 const { Sider } = Layout;
 
-const SideBar = ({ selectedOption, handleMenuClick }) => {
+const SideBar = ({ selectedOption, handleMenuClick, handleLogout }) => {
   const items = [
     getItem(
       "Dashboard",
@@ -53,12 +53,14 @@ const SideBar = ({ selectedOption, handleMenuClick }) => {
   const [collapsed, setCollapsed] = useState(false);
 
   return (
+    <>
     <Sider
       collapsible
       collapsed={collapsed}
       onCollapse={(value) => setCollapsed(value)}
       style={{
         background: "#fff",
+        position: "relative"
       }}
     >
       <div className="demo-logo-vertical" />
@@ -93,7 +95,35 @@ const SideBar = ({ selectedOption, handleMenuClick }) => {
           </Menu.Item>
         ))}
       </Menu>
+      
     </Sider>
+    <Button
+  icon={<img src={LogoutIcon} width={20} height={20} alt="Logout" />}
+  onClick={handleLogout}
+  style={{
+    position: "fixed",
+    bottom: "50px",
+    zIndex: 1,
+    left: "42px",
+    transform: !collapsed ? "none" : "translateX(-50%)",
+    height: "48px",
+    color: "#d57e7e",
+    lineHeight: "48px",
+    textAlign: "center",
+    background: "transparent",
+    cursor: "pointer",
+    transition: "all 0.2s",
+    width: "135px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    border: "none"
+  }}
+>
+  {!collapsed && "Logout"}
+</Button>
+
+  </>
   );
 };
 
