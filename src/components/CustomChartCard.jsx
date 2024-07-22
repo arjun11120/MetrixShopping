@@ -305,7 +305,7 @@ const CustomCardWithChart = () => {
           </Col>
         </Row>
       </Col>
-      <Col span={8}>
+      <Col xs={24} sm={8}>
         <OrderHistory orders={orders} />
       </Col>
     </Row>
