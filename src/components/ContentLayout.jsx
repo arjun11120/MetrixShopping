@@ -11,7 +11,7 @@ const { Header, Content } = Layout;
 const ContentLayout = ({ selectedOption, getContent }) => {
   return (
     <Content style={{ margin: "0px 16px 16px" }}>
-      <Header className="p-0">
+      <Header className="p-0" style={{background:"white"}}>
         <CommonPageHeader selectedOption={selectedOption} />
       </Header>
       <Content style={{ margin: "16px 0" }}>
