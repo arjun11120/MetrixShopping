@@ -115,9 +115,9 @@ const CustomCardWithChart = () => {
   ];
   return (
     <Row gutter={24}>
-      <Col span={16}>
+      <Col xs={24} lg={16}>
         <Row gutter={24}>
-          <Col span={12}>
+          <Col xs={24} lg={12}>
             <Card
               bordered={false}
               style={{
@@ -183,7 +183,7 @@ const CustomCardWithChart = () => {
               </div>
             </Card>
           </Col>
-          <Col span={12}>
+          <Col xs={24} lg={12}>
             <Card
               bordered={false}
               style={{

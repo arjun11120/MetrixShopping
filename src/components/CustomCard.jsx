@@ -7,7 +7,7 @@ const CustomCard = ({ cardData }) => {
   return (
     <Row gutter={24}>
       {cardData.map((data, index) => (
-        <Col span={8} key={index}>
+        <Col xs={24} sm={12} key={index}>
           <Card
             bordered={false}
             style={{
