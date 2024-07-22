@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, Layout, Button } from "antd";
 import { HomeOutlined } from "@ant-design/icons";
 import { getItem } from "./utils"; // Assuming you move getItem function to utils.js or another appropriate file
@@ -51,6 +51,30 @@ const SideBar = ({ selectedOption, handleMenuClick, handleLogout }) => {
   ];
 
   const [collapsed, setCollapsed] = useState(false);
+ 
+  useEffect(() => {
+    const handleInitialResize = () => {
+      if (window.innerWidth < 720) {
+        setCollapsed(true);
+      } else {
+        setCollapsed(false);
+      }
+    };
+    handleInitialResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+      setCollapsed(true);
+    } else {
+      setCollapsed(false);
+    }
+  };
+  
 
   return (
     <>

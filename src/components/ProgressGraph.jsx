@@ -45,6 +45,14 @@ const options = {
   },
 };
 
+const chartStyle = {
+  background: "#fff",
+  margin: "20px 0px",
+  padding: "30px",
+  boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02)",
+  borderRadius: "8px",
+};
+
 const data = {
   labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
   datasets: [
@@ -59,5 +67,5 @@ const data = {
 };
 
 export default function ProgressGraph() {
-  return <Bar options={options} data={data} />;
+  return <Bar style={chartStyle} options={options} data={data} />;
 }
